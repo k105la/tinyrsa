@@ -4,10 +4,10 @@ from math import lcm
 
 class TinyKeys:
     def __init__(self): 
-        #self.p = gmpy2.next_prime(int.from_bytes(os.urandom(1), "little"))
-        #self.q = gmpy2.next_prime(int.from_bytes(os.urandom(1), "little"))        
-        self.p = 61
-        self.q = 53
+        self.p = gmpy2.next_prime(int.from_bytes(os.urandom(1), "little"))
+        self.q = gmpy2.next_prime(int.from_bytes(os.urandom(1), "little"))        
+        #self.p = 61
+        #self.q = 53
         self.n = self.p * self.q
         self.phi = lcm ((self.p - 1), (self.q - 1))
         
