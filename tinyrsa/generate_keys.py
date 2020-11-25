@@ -27,8 +27,8 @@ class TinyKeys:
     
     def public_key(self):
         self.p = self.phi()
-        for e in range(phi):
-            if (e > 1 and phi % e == 0 and self.n % e == 0):
+        for e in range(self.p):
+            if (e > 1 and self.p % e == 0 and self.n % e == 0):
                 e = gmpy2.next_prime(e)
                 break
         return (self.n, e)
