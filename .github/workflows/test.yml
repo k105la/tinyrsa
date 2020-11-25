@@ -40,6 +40,6 @@ jobs:
       with:
         python-version: 3.8
     - name: Install Dependencies
-      run: pip3 install pytest && sudo apt install -y python3-gmpy2
-    - name: Run Pytest
+      run: pip install pytest && sudo apt install -y python3-gmpy2 python-gmpy2 
+    - name: Run Pytest 
       run: python -m pytest -s -v
