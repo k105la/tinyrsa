@@ -26,7 +26,7 @@ class TinyKeys:
         return x % b
     
     def public_key(self):
-        phi = self.phi()
+        self.p = self.phi()
         for e in range(phi):
             if (e > 1 and phi % e == 0 and self.n % e == 0):
                 e = gmpy2.next_prime(e)
@@ -35,5 +35,5 @@ class TinyKeys:
 
     def private_key(self):
         _, e = self.public_key()
-        d = self.modinv(e, self.phi)
+        d = self.modinv(e, self.p)
         return (self.n, d)
