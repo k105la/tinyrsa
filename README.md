@@ -2,10 +2,10 @@
 
 ![Unit Tests](https://github.com/akilhylton/tinyrsa/workflows/Unit%20Tests/badge.svg)
 
-This may not be the most secure RSA library but it is a RSA library that is tiny.
+This may not be the most fully featured RSA library but it is a functional RSA library that is tiny.
 
 ### Installation
-```
+```bash
 cd ~/tinyrsa
 python setup.py install
 ```
