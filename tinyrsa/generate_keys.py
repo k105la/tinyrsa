@@ -6,11 +6,11 @@ class TinyKeys:
     def __init__(self): 
         self.p = gmpy2.next_prime(int.from_bytes(os.urandom(1), "little"))
         self.q = gmpy2.next_prime(int.from_bytes(os.urandom(1), "little"))        
-        #self.p = 61
-        #self.q = 53
         self.n = self.p * self.q
-        self.phi = lcm ((self.p - 1), (self.q - 1))
-        
+
+    def phi(self):
+        return lcm((self.p - 1), (self.q - 1))
+   
     def xgcd(self, a, b): 
         x0, x1, y0, y1 = 0, 1, 1, 0
         while a != 0:
@@ -24,10 +24,9 @@ class TinyKeys:
         if g != 1:
             raise Exception('gcd(a, b) != 1')
         return x % b
-
     
     def public_key(self):
-        phi = self.phi
+        phi = self.phi()
         for e in range(phi):
             if (e > 1 and phi % e == 0 and self.n % e == 0):
                 e = gmpy2.next_prime(e)
@@ -38,4 +37,3 @@ class TinyKeys:
         _, e = self.public_key()
         d = self.modinv(e, self.phi)
         return (self.n, d)
-
