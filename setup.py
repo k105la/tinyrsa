@@ -19,6 +19,6 @@ setup(name='tinyrsa',
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License"
       ],
-      install_requires=['gmpy2, numpy'],
+      install_requires=['gmpy2'],
       python_requires='>=3.8',
       include_package_data=True)
