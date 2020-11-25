@@ -1,4 +1,6 @@
-# tinyrsa
+# tinyrsa 
+
+![Unit Tests](https://github.com/akilhylton/tinyrsa/workflows/Unit%20Tests/badge.svg)
 
 This may not be the most secure RSA library but it is a RSA library that is tiny.
 
@@ -21,6 +23,12 @@ d = decrypt_cipher(e)              # Decrypts message with tinyrsa
 Yes, tinyrsa is as simple as RSA can get it does: key generation, encryption, and decryption.  
 However, tinyrsa doesn't do signing messages or key distribution.
 
+### Running tests
+
+```bash
+python -m pytest
+```
+
 ### TODO
-- Increase two prime numbers (p and q) to 1024 bytes 
-- Add support for signing messages
+* Increase two prime numbers (p and q) to 1024 bytes 
+* Add support for signing messages
