@@ -1,6 +1,6 @@
 import os
 import gmpy2
-from math import lcm
+import numpy as np
 
 class TinyKeys:
     def __init__(self): 
@@ -9,7 +9,7 @@ class TinyKeys:
         self.n = self.p * self.q
 
     def phi(self):
-        return lcm((self.p - 1), (self.q - 1))
+        return np.lcm((self.p - 1), (self.q - 1))
    
     def xgcd(self, a, b): 
         x0, x1, y0, y1 = 0, 1, 1, 0

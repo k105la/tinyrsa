@@ -1,7 +1,6 @@
 #!/usr/local/bin python
 import gmpy2
 import random
-from math import lcm
 from tinyrsa.generate_keys import TinyKeys
 
 k = TinyKeys()
