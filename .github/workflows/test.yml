@@ -40,6 +40,6 @@ jobs:
       with:
         python-version: 3.8
     - name: Install Dependencies
-      run: pip install pytest gmpy2
+      run: pip3 install pytest 
     - name: Run Pytest
       run: python -m pytest -s -v
